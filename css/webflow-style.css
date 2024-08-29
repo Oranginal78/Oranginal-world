@@ -223,6 +223,9 @@ th {
   font-family: webflow-icons !important;
 }
 
+
+
+
 .w-icon-slider-right:before {
   content: "";
 }
@@ -1521,6 +1524,8 @@ textarea.w-select {
     padding-left: 10px;
   }
 }
+
+
 
 .w-lightbox-backdrop {
   cursor: auto;
@@ -4955,7 +4960,8 @@ figure {
 }
 
 .close-button {
-  filter: invert();
+  filter: normal();
+  /* mod */
   cursor: pointer;
 }
 
@@ -6246,6 +6252,23 @@ figure {
   display: flex;
 }
 
+
+@media screen and (max-width: 767px) {
+
+  .home-hero-left-title .caps,
+  .home-hero-paragrah .caps,
+  .home-hero-button .text-size-regular {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    /*color: white !important;*/
+  }
+}
+
+.home-hero-content {
+  background-color: black;
+  /* Juste pour tester si le problème persiste */
+}
+
 .home-hero-left-title {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
@@ -6306,7 +6329,7 @@ figure {
 
 .home-3-hero {
   color: #fff;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: screen;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -6314,11 +6337,48 @@ figure {
   position: relative;
 }
 
+.home-hero-left-title,
+.home-hero-paragrah,
+.home-hero-button {
+
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fond noir avec 50% d'opacité */
+  padding: 10px;
+  /* Ajouter un peu d'espace autour du texte */
+  border-radius: 5px;
+  /* Adoucir les coins */
+}
+
+.home-hero-left-title .caps,
+.home-hero-paragrah .caps,
+.home-hero-button .text-size-regular {
+  font-size: 1 rem;
+  /* Ajuster selon vos besoins */
+  font-weight: 400;
+  /* Augmenter le poids de la police */
+}
+
+.home-hero-left-title .caps,
+.home-hero-paragrah .caps,
+.home-hero-button .text-size-regular {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Ombrage noir doux */
+}
+
+
+
 .home-3-hero-section {
   background-image: url("../images1/fe.jpg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  .home-3-hero-section {
+    background-position: 38% center;
+    /* Déplace l'image vers la droite */
+  }
 }
 
 .home-hero-content {
@@ -7955,7 +8015,8 @@ figure {
   }
 
   .navbar-menu-lottie {
-    filter: invert();
+    filter: normal();
+    /* mod */
   }
 
   .dropdown-list {
@@ -9495,7 +9556,8 @@ figure {
   }
 
   .dropdown-icon {
-    filter: invert();
+    filter: normal();
+    /* mod */
     display: flex;
   }
 
