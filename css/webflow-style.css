@@ -6340,29 +6340,46 @@ figure {
 .home-hero-left-title,
 .home-hero-paragrah,
 .home-hero-button {
-
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Fond noir avec 50% d'opacité */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Fond noir avec plus d'opacité */
   padding: 10px;
-  /* Ajouter un peu d'espace autour du texte */
   border-radius: 5px;
-  /* Adoucir les coins */
 }
 
 .home-hero-left-title .caps,
 .home-hero-paragrah .caps,
 .home-hero-button .text-size-regular {
-  font-size: 1 rem;
-  /* Ajuster selon vos besoins */
-  font-weight: 400;
-  /* Augmenter le poids de la police */
+  font-size: 0.9rem;
+  /* Ajuster la taille du texte */
+  font-weight: 700;
+  /* Texte plus épais */
+  color: #f0f0f0;
+  /* Texte gris clair */
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.8);
+  /* Ombrage plus prononcé */
 }
 
-.home-hero-left-title .caps,
-.home-hero-paragrah .caps,
-.home-hero-button .text-size-regular {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  /* Ombrage noir doux */
+@media screen and (max-width: 767px) {
+
+  .home-hero-left-title .caps,
+  .home-hero-paragrah .caps,
+  .home-hero-button .text-size-regular {
+    font-size: 0.9rem;
+    /* Ajustez la taille du texte pour les mobiles */
+    font-weight: 600;
+    /* Texte plus épais pour les mobiles */
+    text-shadow: none !important;
+    /* Supprimer les ombres de texte */
+    box-shadow: none !important;
+    /* Supprimer les ombres de boîte */
+  }
+
+  .home-hero-left-title,
+  .home-hero-paragrah,
+  .home-hero-button {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Plus d'opacité sur mobile */
+  }
 }
 
 
@@ -6374,12 +6391,6 @@ figure {
   background-size: cover;
 }
 
-@media only screen and (max-width: 767px) {
-  .home-3-hero-section {
-    background-position: 38% center;
-    /* Déplace l'image vers la droite */
-  }
-}
 
 .home-hero-content {
   z-index: 11;
